@@ -2,10 +2,14 @@ jiacrontab-frontend 前端代码
 ### 后端地址 https://github.com/topascend/jiacrontab
 ## 安装包管理工具
 [安装yarn](https://yarnpkg.com)
+```
+npm install -g yarn
+```
 ## 安装依赖
 
 ```
 yarn
+yarn add react-scripts-ts --dev
 ```
 
 ## 配置代理
@@ -39,11 +43,5 @@ yarn build
 
 ## 打包jiacrontab
 ```sh
-go get -u github.com/kataras/bindata/cmd/bindata
-cd jiacrontab/jiacrontab_admin
-// 生成bindata_gzip.go
-bindata -pkg admin ./assets/...
-
-cd ..
-make build
+生产环境编译后直接将 build的全部内容复制到后端 jiacrontab/jiacrontab_admin/assets
 ```
